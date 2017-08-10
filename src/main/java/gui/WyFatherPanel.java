@@ -10,7 +10,7 @@ import java.util.HashMap;
 
 /**
  * Created by Scruel on 2016/6/22.
- * Personal blog  --  http://wysum.com
+ * Personal github - https://github.com/scruel
  */
 public class WyFatherPanel extends JScrollPane {
     Color normalColor = new Color(231, 239, 248);

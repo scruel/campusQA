@@ -8,7 +8,7 @@ import java.util.Date;
 
 /**
  * Created by Scruel on 2016/6/14.
- * Personal blog  --  http://wysum.com
+ * Personal github - https://github.com/scruel
  */
 public class ChartWindow extends JFrame {
     Color btn_normal = new Color(15, 146, 238);

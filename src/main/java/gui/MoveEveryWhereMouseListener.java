@@ -6,7 +6,7 @@ import java.awt.event.MouseEvent;
 
 /**
  * Created by Scruel on 2016/6/23.
- * Personal blog  --  http://wysum.com
+ * Personal github - https://github.com/scruel
  */
 public class MoveEveryWhereMouseListener extends MouseAdapter {
     private int x;

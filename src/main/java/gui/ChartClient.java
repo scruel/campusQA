@@ -13,7 +13,7 @@ import java.util.HashMap;
 
 /**
  * Created by Scruel on 2016/6/14.
- * Personal blog  --  http://wysum.com
+ * Personal github - https://github.com/scruel
  */
 public class ChartClient extends JFrame {
     private String username;
