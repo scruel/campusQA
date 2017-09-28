@@ -6,7 +6,7 @@ import java.util.LinkedList;
 
 /**
  * Created by Scruel on 2016/12/13.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Github: http://www.github.com/scruel
  */
 public class Output_Sent2Vec {
     public static void main(String[] args) throws Exception {

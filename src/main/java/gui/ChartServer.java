@@ -69,9 +69,6 @@ public class ChartServer extends JFrame {
 
             }
         });
-
-
-//关闭的时候加一个给所有客户端的结束命令
         try {
             int port = 8899;
             jta.append(new Date() + " 正在初始化(生成深度学习神经网络)..." + "\n");

@@ -6,7 +6,7 @@ import java.net.Socket;
 
 /**
  * Created by Scruel on 2016/12/21.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Github: http://www.github.com/scruel
  */
 public class QARobotStart {
     private Socket client = null;

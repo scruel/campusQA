@@ -2,7 +2,7 @@ import gui.LoginWindow;
 
 /**
  * Created by Scruel on 2016/12/21.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Github: http://www.github.com/scruel
  */
 public class Client_Main {
     public static void main(String[] args) {

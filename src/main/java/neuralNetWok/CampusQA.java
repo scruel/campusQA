@@ -17,7 +17,7 @@ import java.util.Scanner;
 
 /**
  * Created by Scruel on 2016/12/14.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Github: http://www.github.com/scruel
  */
 public class CampusQA implements QA {
     private MultiLayerNetwork model;
@@ -31,15 +31,16 @@ public class CampusQA implements QA {
         FileReader cfIn = new FileReader(charFile);
         BufferedReader bcfr = new BufferedReader(cfIn);
         LineNumberReader lnr = new LineNumberReader(bcfr);
+        // 定位到最后一行
         lnr.skip(charFile.length());
+        // 字典向量大小
         this.numInputs = lnr.getLineNumber();
         bcfr.close();
-        OneHotNN oneHotNN = new OneHotNN();
-        oneHotNN.initialModel(numInputs);
-        model = oneHotNN.getModel();
-        sent2Vec = new Sent2Vec();
-        sent2Vec.initialCharVec();
-        aswList = sent2Vec.getAswList();
+        OneHotNN oneHotNN = new OneHotNN(this.numInputs);
+        this.model = oneHotNN.getModel();
+        this.sent2Vec = new Sent2Vec();
+        this.sent2Vec.initialCharVec();
+        this.aswList = this.sent2Vec.getAswList();
     }
 
     public static void main(String[] args) throws Exception {
@@ -52,7 +53,7 @@ public class CampusQA implements QA {
         String text;
         while (true) {
             text = input.nextLine();
-            if (text.indexOf("再见") != -1) return;
+            if (text.contains("再见")) return;
             System.out.println(campusQA.getAnswer(text));
         }
     }
@@ -64,7 +65,7 @@ public class CampusQA implements QA {
         List<Writable> ret = new ArrayList<Writable>();
         for (String s : split) {
             ret.add(new Text(s));
-        }
+        }// 获取结果集
         INDArray featureVector = Nd4j.create(numInputs);
         int featureCount = 0;
         for (int j = 0; j < ret.size(); j++) {

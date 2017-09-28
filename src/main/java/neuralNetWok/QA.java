@@ -2,7 +2,7 @@ package neuralNetWok;
 
 /**
  * Created by Scruel on 2016/12/24.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Github: http://www.github.com/scruel
  */
 public interface QA {
     String getAnswer(String text);

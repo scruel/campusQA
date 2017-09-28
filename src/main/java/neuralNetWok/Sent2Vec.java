@@ -7,7 +7,7 @@ import java.util.LinkedList;
 
 /**
  * Created by Scruel on 2016/12/14.
- * Personal blog : http://blog.csdn.net/scruelt
+ * Github: http://www.github.com/scruel
  */
 public class Sent2Vec {
     LinkedList<Character> list = new LinkedList<Character>();
@@ -38,7 +38,7 @@ public class Sent2Vec {
     }
 
     public String getMatrixString(String text) {
-        String str = "";
+        StringBuilder str = new StringBuilder();
         //将句子文字映射到字向量中
         int[] vector = new int[list.size()];
         char[] s = text.toCharArray();
@@ -47,9 +47,9 @@ public class Sent2Vec {
             if (index != -1) vector[index] = 1;
         }
         for (int n : vector) {
-            str += n + ",";
+            str.append(n).append(",");
         }
-        str = str.substring(0, str.length() - 1);
-        return str;
+        str = new StringBuilder(str.substring(0, str.length() - 1));
+        return str.toString();
     }
 }
