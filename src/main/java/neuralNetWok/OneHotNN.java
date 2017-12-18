@@ -27,8 +27,7 @@ import java.io.LineNumberReader;
 /**
  * TODO 替代所有文本处理为数据库处理
  * <p>
- * Created by Scruel on 2016/12/14.
- * Github: http://www.github.com/scruel
+ * @author Scruel Tao
  */
 public class OneHotNN {
   private MultiLayerNetwork model;
@@ -85,8 +84,6 @@ public class OneHotNN {
         .layer(0, new DenseLayer.Builder().nIn(numInputs).nOut(numHiddenNodes).learningRate(learningRate).build())
         .layer(1, new DenseLayer.Builder().nIn(numHiddenNodes).nOut(numHiddenNodes).learningRate(learningRate).build())
         .layer(2, new OutputLayer.Builder(LossFunction.NEGATIVELOGLIKELIHOOD).weightInit(WeightInit.XAVIER).activation("softmax").nIn(numHiddenNodes).nOut(numOutputs).build()).pretrain(false).backprop(true).build();
-
-
 //                UIServer uiServer = UIServer.getInstance();
 //                StatsStorage statsStorage = new InMemoryStatsStorage();
 //                uiServer.attach(statsStorage);

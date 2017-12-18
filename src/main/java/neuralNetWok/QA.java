@@ -1,9 +1,8 @@
 package neuralNetWok;
 
 /**
- * Created by Scruel on 2016/12/24.
- * Github: http://www.github.com/scruel
+ * @author Scruel Tao
  */
 public interface QA {
-    String getAnswer(String text);
+  String getAnswer(String text);
 }

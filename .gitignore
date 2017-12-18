@@ -5,6 +5,7 @@
 # IntelliJ project files
 .idea
 *.iml
+logs
 out
 gen
 target
